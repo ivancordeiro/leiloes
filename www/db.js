@@ -24,7 +24,7 @@ function onInit(){
            createTables();
             //onDeleteTables();
            // onAddColuna('teste','VARCHAR ');
-           // onUpdateDB( 3, 'joao23', 'daa4s57ree23', 'cli' ); //id, nome, token, tipo 
+           // onUpdateDB( 3, 'joao23', 'daa4s57ree23' ); //id, login, token
             //onDeleteDB(2);//id
 
 
@@ -61,16 +61,16 @@ function onInit(){
 
 
 function initDB(){
-    var shortName = 'leiloesDB';
+    var shortName = 'leiloesDB2';
     var version = '1.0';
-    var displayName = 'MyLeiloesDB';
+    var displayName = 'MyLeiloesDB2';
     var maxSize = 1048576; // Em bytes - 1mb
     localDB = window.openDatabase(shortName, version, displayName, maxSize);
 }
 
 
 function createTables(){
-    var query = 'CREATE TABLE IF NOT EXISTS usuario(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nome VARCHAR NOT NULL, token VARCHAR NOT NULL,tipo VARCHAR NOT NULL );';
+    var query = 'CREATE TABLE IF NOT EXISTS usuario(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, login VARCHAR NOT NULL, token VARCHAR NOT NULL);';
     try {
         localDB.transaction(function(transaction){
             transaction.executeSql(query, [], nullDataHandler, errorHandlerDB);
@@ -119,12 +119,12 @@ function onAddColuna(coluna,tipo){
 
 
 
-function onUpdateDB( id, nome, token, tipo ){
+function onUpdateDB( id, login, token ){
 
-        var query = "update usuario set nome=?, token=?, tipo=? where id=?;";
+        var query = "update usuario set login=?, token=? where id=?;";
         try {
             localDB.transaction(function(transaction){
-                transaction.executeSql(query, [nome, token, tipo, id], function(transaction, results){
+                transaction.executeSql(query, [login, token, id], function(transaction, results){
                     if (!results.rowsAffected) {
                         updateStatusDB("Erro: Update não realizado.");
                     }
@@ -184,15 +184,15 @@ function onDeleteGeralDB(){
 
 
 
-function onCreateDB( token, nome, tipo ){
+function onCreateDB( token, login ){
     if ( token != "") {
 
       onDeleteGeralDB();
 
-        var query = "insert into usuario (nome, token, tipo) VALUES (?, ?, ?);";
+        var query = "insert into usuario (login, token) VALUES (?, ?);";
         try {
             localDB.transaction(function(transaction){
-                transaction.executeSql(query, [nome, token, tipo], function(transaction, results){
+                transaction.executeSql(query, [login, token], function(transaction, results){
                     if (!results.rowsAffected) {
                         updateStatusDB("Erro: Inserção no banco não realizada");
                     }
@@ -239,13 +239,13 @@ function checaLogin(){
 					var row = results.rows.item(0);
 					tokenLogado = row['token'];
 					idLogado = row['id'];
-					nomeLogado = row['nome'];
+					loginLogado = row['login'];
 					
 					} else {
 					
 					tokenLogado = '';
 					idLogado = '';
-					nomeLogado = '';
+					loginLogado = '';
 					
 					}
 					
@@ -254,13 +254,19 @@ function checaLogin(){
 					
 					if( tokenLogado == '' ){
 					
-					alert(' teste 1  - nao ta logado ' ); 
+					//alert(' teste 1  - nao ta logado ' ); 
 					//telaLogin();
+                   $("#bt_logar").show();
+                    $("#bt_deslogar").hide();
+                    $("#login").val( '' );
 					
 					} else {
 					
-					alert(' teste 2 - ta logado' ); 
+					//alert(' teste 2 - ta logado' ); 
 					//telaConteudo();
+                    $("#bt_logar").hide();
+                    $("#bt_deslogar").show();
+                    $("#login").val( loginLogado );
 					
 					}
 
