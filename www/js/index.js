@@ -10,9 +10,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {//1
 
-/*
+
 atualizar();
 onInit();
+
+
 
 $("#bt_iniciar").click(function(){
 atualizar();
@@ -22,14 +24,19 @@ $("#bt_logar").click(function(){
 logar();
 });
 
+$("#bt_deslogar").click(function(){
+deslogar();
+});
+
 $("#bt_logando").click(function(){
 logando();
 });
 
+
 $("#bt_fechar").click(function(){
 navigator.app.exitApp();
 });
-*/
+
 
 }//1
 
@@ -271,27 +278,3 @@ return networkState;
 
 
 
-function json4(){
-
-alert('testando envio json 4');
-	
-$.ajax({
-dataType: "json",
-type: "POST",
-url: "http://ivanprogramador.com.br/json4.php",
-data: "dia=" ,
-crossDomain: true,
-
-success: function(retorno){ 
-
-alert(  "Testando retorno de json 4: " + retorno.teste);
-
-}
-,beforeSend: function(){
-},
-complete: function(){
-}
-
-});
-
-}

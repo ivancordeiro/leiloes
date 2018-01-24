@@ -19,7 +19,7 @@
 <body style="background:#fff;">
 
     
-<div syle="width:100%; background:#000;"> 
+<div syle="width:100%; background:#000; height:40px;"> 
 
 
   <!-- inicio cabecalho  -->
@@ -32,7 +32,7 @@
 
 
           <div id="bt_iniciar"  
-style="float:left; color:#fff; font-size:12px; width:100%; cursor: pointer; background:#333; margin:1px ; 
+style="float:left; color:#fff; font-size:12px; width:100%; cursor: pointer; background:#444; margin:1px ; 
  height:25px; -webkit-border-radius:2px;-moz-border-radius:2px; border-radius: 2px; text-align:center; padding-top:10px; "> 
             In&iacute;cio </div>
 
@@ -41,13 +41,13 @@ style="float:left; color:#fff; font-size:12px; width:100%; cursor: pointer; back
         <td valign="top" align="center" style="padding:2px; width:30%;  "> 
 
           <div id="bt_logar"  
-style="float:left; color:#fff; font-size:12px; width:100%;  cursor: pointer; background:#333; margin:1px ; 
+style="float:left; color:#fff; font-size:12px; width:100%;  cursor: pointer; background:#444; margin:1px ; 
 height:25px; -webkit-border-radius:2px;-moz-border-radius:2px; border-radius: 2px; text-align:center; padding-top:10px; "> 
             LOGAR </div>
 
 
           <div id="bt_deslogar"  
-style="float:left; color:#fff; font-size:12px; width:100%;  cursor: pointer; background:#333; margin:1px ; 
+style="float:left; color:#fff; font-size:12px; width:100%;  cursor: pointer; background:#444; margin:1px ; 
 height:25px; -webkit-border-radius:2px;-moz-border-radius:2px; border-radius: 2px; text-align:center; padding-top:10px; display:none; "> 
             DESLOGAR </div>
 
@@ -127,29 +127,9 @@ ENTRAR
    <script type="text/javascript" src="db.js" ></script> 
 
     <script type="text/javascript">
-        //app.initialize();
+        app.initialize();
 
 
-atualizar();
-onInit();
-
-
-
-$("#bt_iniciar").click(function(){
-atualizar();
-});
-
-$("#bt_logar").click(function(){
-logar();
-});
-
-$("#bt_deslogar").click(function(){
-deslogar();
-});
-
-$("#bt_logando").click(function(){
-logando();
-});
 
 
 
