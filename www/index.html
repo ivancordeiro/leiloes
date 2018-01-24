@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <!--  <meta charset="utf-8" /> -->
+ <meta charset="iso-8859-1" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" /> 
+
+    <title>Aplicativo para Leilões</title>
+</head>
+
+<body style="background:#fff;">
+
+    
+<div syle="width:100%; background:#000;"> 
+
+
+  <!-- inicio cabecalho  -->
+  <div  style="clear:both; height:40px; "> 
+    <table border="0" cellpadding="0" cellspacing="0" style="width:100%; ">
+      <tr> 
+
+
+        <td valign="top" align="right" style="padding:2px; padding-left:0px; width:30%; "> 
+
+
+          <div id="bt_iniciar"  
+style="float:left; color:#fff; font-size:12px; width:100%; cursor: pointer; background:#333; margin:1px ; 
+ height:25px; -webkit-border-radius:2px;-moz-border-radius:2px; border-radius: 2px; text-align:center; padding-top:10px; "> 
+            In&iacute;cio </div>
+
+</td>
+
+        <td valign="top" align="center" style="padding:2px; width:30%;  "> 
+
+          <div id="bt_logar"  
+style="float:left; color:#fff; font-size:12px; width:100%;  cursor: pointer; background:#333; margin:1px ; 
+height:25px; -webkit-border-radius:2px;-moz-border-radius:2px; border-radius: 2px; text-align:center; padding-top:10px; "> 
+            LOGAR </div>
+
+
+        </td>
+
+        <td valign="top" align="center" style="padding:2px;"> 
+
+          <div id="bt_fechar" onClick="logar()"  
+style="float:left; color:#fff; font-size:12px; width:100%;  cursor: pointer; background:#333; margin:1px ; 
+height:25px; -webkit-border-radius:2px;-moz-border-radius:2px; border-radius: 2px; text-align:center; padding-top:10px; "> 
+            FECHAR O APP </div>
+
+        </td>
+
+
+
+      </tr>
+    </table>
+  </div>
+  <!-- fim cabecalho  -->
+
+
+
+
+
+
+  <div id="div_logar" style="position:absolute; display:none; width:220px; background:#F17D16; color:#fff; padding:10px; margin-left:15%; -webkit-border-radius:10px;-moz-border-radius:10px; border-radius: 10px;  "> 
+
+<form method="post" action="" name="frmlogin">
+
+<div >
+<b>Login:</b> <br />
+<input type="text" name="login" id="login" class="input_gr" style="height:40px; -webkit-border-radius:7px;-moz-border-radius:7px; border-radius: 7px; width:200px;" value="" placeholder="Digite se login" required >
+</div>
+
+<div >
+<b>Senha:</b> <br />
+<input type="password" name="senha" id="senha" class="input_gr" style="height:40px; -webkit-border-radius:7px;-moz-border-radius:7px; border-radius: 7px; width:200px;"  placeholder="Digite sua senha" required  >
+</div>
+
+<div style="clear:both; padding-top:10px;">
+<input type="button"  value="Entrar" id="bt_logar" class="botoes"  style="background-color:#363B5A; color:#ffffff !important; height:40px; width:200px; -webkit-border-radius:5px;-moz-border-radius:5px; border-radius: 5px; filter:Alpha(Opacity=90);opacity:.9; " > 
+
+<!--
+<button id="bt_logar"  class="botoes2" style="background-color:#63886F; color:#ffffff !important; font-size:20px; padding-top:10px; padding-bottom:10px; " >
+ENTRAR
+</button>
+-->
+
+</div>
+
+</form>
+
+  </div>
+
+
+
+
+  <div style="clear:both; "> 
+    <iframe id="ifrBrowser" name="ifrBrowser" width="100%" height="440"  marginheight="0" marginwidth="0" frameborder="0" scrolling="auto" class="ifrBrowser" ></iframe>
+  </div>
+
+
+
+
+
+</div>
+
+<!--
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+-->
+
+<script src="js/jquery-2.1.3.min"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+   <script type="text/javascript" src="db.js" ></script> 
+
+    <script type="text/javascript">
+        //app.initialize();
+
+
+atualizar();
+//onInit();
+
+
+$("#bt_iniciar").click(function(){
+atualizar();
+});
+
+$("#bt_logar").click(function(){
+logar();
+});
+
+$("#bt_logando").click(function(){
+logando();
+});
+
+
+
+
+//window.open(encodeURI('http://www.fazerja.com.br/site'), 'ifrBrowser');
+    </script>
+</body>
+
+</html>
