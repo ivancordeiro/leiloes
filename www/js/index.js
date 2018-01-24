@@ -50,10 +50,11 @@ alert('O aplicativo nao detectou conexao com internet.');
 var altTela = parseInt( screen.height ) ;
 if( altTela != '' && altTela != 'undefined'  && altTela != 0 ){
 //alert(altTela);
-document.getElementById("ifrBrowser").style.height = altTela - 70 +"px";
+document.getElementById("ifrBrowser").style.height = altTela - 40 +"px";
 }
 
-var urlBrow = 'http://sistemaparaleiloes.com.br/modelo/index.php?app=s&papp=and';
+//var urlBrow = 'http://sistemaparaleiloes.com.br/modelo/index.php?app=s&papp=and';
+var urlBrow = 'https://sistemaparaleiloes.com.br/modelo/pregao.php?idleilao=478&app=s&papp=and';
 //alert( 'urlBrow: ' + urlBrow );
 ifrBrowser.location.href =  urlBrow;
 
