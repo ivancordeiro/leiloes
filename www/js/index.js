@@ -1,8 +1,8 @@
 baseUrl = 'http://sistemaparaleiloes.com.br/modelo/';
 getPG = "?app=and&sid=" + Math.random();
-tokenLogado = '';
-idLogado = '';
-loginLogado = '';
+//tokenLogado = '';
+//idLogado = '';
+//loginLogado = '';
 
 document.addEventListener("deviceready", onDeviceReady, false); 
 
@@ -12,7 +12,7 @@ function onDeviceReady() {//1
 
 
 atualizar();
-onInit();
+//onInit();
 
 
 
@@ -24,6 +24,7 @@ $("#bt_logar").click(function(){
 logar();
 });
 
+/*
 $("#bt_deslogar").click(function(){
 deslogar();
 });
@@ -31,7 +32,7 @@ deslogar();
 $("#bt_logando").click(function(){
 logando();
 });
-
+*/
 
 $("#bt_fechar").click(function(){
 navigator.app.exitApp();
@@ -107,10 +108,11 @@ document.getElementById('div_logar').style.display = 'none';
 
 
 
-
+/*
 function logar(){
 document.getElementById('div_logar').style.display = 'block';
 }
+*/
 
 
 
@@ -119,8 +121,7 @@ document.getElementById('div_logar').style.display = 'block';
 
 
 
-
-
+/*
 //3
 function logando(){
 
@@ -220,6 +221,7 @@ complete: function(){
 }
 //3
 
+/*
 
 
 
@@ -228,8 +230,7 @@ complete: function(){
 
 
 
-
-
+/*
 //4
 function deslogar(){
 
@@ -264,7 +265,7 @@ atualizar();
 
 }
 //4
-
+*/
 
 
 
@@ -282,7 +283,7 @@ return networkState;
 
 
 
-
+/*
 function atualizaLogin(){//5
 alert('teste1');
 if( tokenLogado == '' ){
@@ -340,5 +341,5 @@ atualizar();
 
 }
 }//5
-
+*/
 
