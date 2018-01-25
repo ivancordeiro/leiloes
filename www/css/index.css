@@ -93,20 +93,17 @@ padding:2px;  padding-top:5px; padding-bottom:0px; margin:0px;
 font-weight:bold; font-size:15px;
 cursor: pointer;
 
-background-color:#353B5A !important; color:#ffffff !important; 
-
+background-color:#111 !important; color:#ffffff !important; 
 
 -webkit-border-radius:7px;-moz-border-radius:7px; border-radius: 7px; 
-
 
 }
 
 
 input {
-height:40px;  width:200px;
-padding:2px;  padding-top:5px; padding-bottom:0px;  margin:0px; margin-bottom:5px;
+height:35px;  width:200px;
+padding:2px;  padding-top:2px; padding-bottom:0px;  margin:0px; margin-bottom:5px;
 font-weight:bold; font-size:15px;
-
 
 background-color:#fff !important ; color:#555 !important;
 
