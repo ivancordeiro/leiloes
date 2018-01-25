@@ -188,6 +188,7 @@ if( retorno.logou == 's' ){
 
 onCreateDB( retorno.token, logLogin );
 document.getElementById('div_logar').style.display = 'none';
+atualizar();
 
 } else {
 alert( 'Falha ao logar: ' + retorno.msg );
