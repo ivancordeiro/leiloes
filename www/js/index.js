@@ -88,14 +88,12 @@ document.getElementById("ifrBrowser").style.height = altTela - 40 +"px";
 }
 
 
-//var urlBrow = baseUrl + 'index.php?app=and';
-/////////////var urlBrow = baseUrl + 'index.php' + getPG ;
-var urlBrow = baseUrl + 'pregao.php' + getPG + '&idleilao=478';
+
+var urlBrow = baseUrl + 'index.php' + getPG ;
+//var urlBrow = baseUrl + 'pregao.php' + getPG + '&idleilao=478';
 ///////////////alert( 'urlBrow: ' + urlBrow );
 ifrBrowser.location.href =  urlBrow;
-/////////////top.ifrBrowser.document.location.href =  'http://www.fazerja.com.br/site';
 
-/////alert('fim');
 
 }
 
