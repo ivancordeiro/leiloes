@@ -18,7 +18,7 @@
  */
 
 
-urlBrow = 'http://fazerja.com.br/site/index.php?app=s&os=i';
+urlBrow = 'http://sistemaparaleiloes.com.br/modelo/index.php?app=s&os=i';
 
 var app = {
     // Application Constructor
